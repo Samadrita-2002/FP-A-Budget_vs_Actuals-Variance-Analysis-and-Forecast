@@ -43,18 +43,15 @@ Excel (inspection, FORECAST.LINEAR validation) → Python/pandas + scikit-learn
 
 ## Key findings
 - Overall: the business modestly beat budget — $1.8M actual vs. $1.7M budget, a total variance of +$123.8K (~7% over plan).
-- Sales by category is well-balanced, not concentrated: Technology contributes 36.5%, Office Supplies 32.3%, while Furniture has 31.3% of actual sales. So, no single category is carrying or dragging the business.
-- Technology is the most volatile category so far. It shows up multiple times in the 5 best performing periods table as well as the 5 worst performing periods table, in fact occupying 4/5 slots in the latter. Combined with the Max Variance (363.78%) and Min Variance (-71.10%) KPI cards, this tells that sales of Technology products fluctuate harder in both directions than the other categories.
+- Sales by category is well-balanced, not concentrated: Technology contributes 36.45%, Office Supplies 31.3%, while Furniture has 32.26% of actual sales. So, no single category is carrying or dragging the business.
+- Technology is the most volatile category so far. It shows up multiple times in the 5 best performing periods table as well as the 5 worst performing periods table, in fact occupying 4/5 slots in the latter. Combined with the Max Variance (335.55%) and Min Variance (-72.86%) KPI cards, this tells that sales of Technology products fluctuate harder in both directions than the other categories.
 - A clear improvement trend over time is visible through both the aforementioned tables and the actuals_vs_budget line chart. The worst-performing periods cluster almost entirely in 2015 (March, July, September), while the best-performing periods cluster in 2016–2017. Even the yearly variance waterfall confirms this directly — 2015, in the red column, shows that aggregate sales was under budget, then 2016 and 2017 both were meaningfully over budget.
 - The 3-month forecast is trending downward — the red-dashed forecast line in the line chart slightly dips at the end. Given 2015 was the only underperforming year, a projected downturn is worth flagging before it becomes a repeat pattern.
 
 ## Recommendations / Business Implications
-- Move from a flat 8% YoY growth budget to a more category-specific budgeting based on historical volatility. A single growth assumption applied across Technology, Office Supplies, and Furniture doesn't fit well since Technology's volatility implies a flat rate will keep producing large, misleading variance percentages for that category specifically.
 - Put a variance investigation threshold (e.g., ±20% in a single month triggering a root-cause review). Right now on this dashboard, fluctuations up to +271% and down to -71% are visible only in hindsight. If a threshold variance is implemented, instead of simply reporting the fluctuations later, we can use it as an early-warning tool and improve sales by investing the underlying driving factors.
 - Investigate what's actually driving Technology's sales fluctuations. Perhaps it's the product launch timing, promotional discounting, or seasonal demand (e.g. holiday electronics). Once identified, that driver should determine next year's category-level budget rather than just a blanket growth rate.
 - The downward 3-month forecast should be treated as an early signal. Investigating the cause immediately can prevent a later loss.
-
-#Caveat: Since the budget here is a constructed prior-year-plus-8% baseline rather than a real internal budget, some of the extreme variance percentages (like 363.78% or -71%) partly reflect the limitations of a flat growth-rate method.
 
 ## Dashboard
 [Dashboard](screenshots/Dashboard.png)
